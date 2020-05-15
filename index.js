@@ -245,20 +245,31 @@ function getArtistByIndex(id, name) {
  * For example, if removeArtist is invoked with the data and the number 0,
  * it will remove Amedeo Modigliani from our dataset.
 */
-function removeArtist(/*code here*/) {
+function removeArtist(arr, id) {
     /* code here */
+    arr.splice(id, 1);
+    return arr;
   }
+
+  // console.log(removeArtist(artists, 0));
   
   /**
 
 
 /* Task 5: Create a function called lotsOfArt() that takes artists as an argument and returns an array with names of artists who painted more than 100 paintings */
 
-function lotsOfArt(/* Code here */){
-
+function lotsOfArt(arr){
     /* Code here */
-
+    let artistOver = [];
+    for(let i = 0; i < arr.length; i++){
+      if(arr[i].paintings >=100){
+        artistOver.push(arr[i].name);
+      }
+    }
+    return artistOver;
   }
+
+  // console.log(lotsOfArt(artists));
 
 
 /* Task 6: Create a function called `addArtist` that can accept an array of information and add it to the artists array. Then, Add a 21st artist to the array (you) with custom information! 👩‍🎨👨‍🎨
@@ -270,13 +281,13 @@ genre: Web Design,
 nationality: Your Nationality Here
 bio: Add 1-2 sentences (or use lorem ipsum) "*/
 
-function addArtist(/* Code here */){
-
+function addArtist(arr){
     /* Code here */
-
+    arr.push({'id': 24, 'name': 'Shanon Fritz', 'years': '1995 - 2020', 'genre': 'Web Design', 'nationality': 'American', 'bio': 'Love being creative, love animals, enjoy watching anime, playing games, and drawing.'});
+    return artists;
   }
 
-
+// console.log(addArtist(artists));
 
 
 
