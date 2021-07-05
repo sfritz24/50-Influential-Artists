@@ -1,0 +1,20 @@
+.imgsetting(){
+    border-radius: 8px;
+    width: 300px;
+    height: 250px;
+    overflow: hidden;
+    object-fit: cover;
+}
+
+.bttn(@size: 2rem, @boxwidth: 16%){
+    font-size: @size;
+    width: @boxwidth;
+    padding: 1% 0;
+    box-shadow: 0 0 5px inset @darknavcolor;
+    border-radius: 5%;
+    border: 1px solid grey;
+
+    @media(max-width:500px){
+        border: 1px solid @navcolor;
+    }
+}
